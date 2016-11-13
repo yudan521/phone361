@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>摩天轮</title>
+	<style type="text/css">
+		.box{width: 800px;height: 800px;margin:200px auto;position: relative;animation: move1 10s linear;}
+		 @keyframes move1{
+			form{transform: rotate(0deg);}
+			to{transform: rotate(360deg);}
+		} 
+		img:nth-child(2){position: absolute;top:750px;left:-150px;animation: move2 10s linear;transform-origin:top center;}
+		img:nth-child(3){position: absolute;top:750px;left:-200px;animation: move2 10s linear;transform-origin:top center;}
+		img:nth-child(4){position: absolute;top:750px;left:-250px;animation: move2 10s linear;transform-origin:top center}
+		 @keyframes move2{
+			form{transform: rotate(0deg)}
+			to{transform: rotate(-360deg)}
+		} 
+		/*.box1{width: 180px;height: 300px;background:url(5.png) no-repeat;animation: move3 1s steps(7) infinite,move4 5s linear infinite;transform-origin: 90px 600px;position: absolute;left:45%;position: absolute;top:0;}
+		 @keyframes move3{
+				from{background-position: 0 0}
+				to{background-position: -1280px 0}
+		    }
+		 @keyframes move4{
+		 		from{transform: rotate(0deg);}
+		 		to{transform: rotate(-360deg);}
+		     }  */
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+			var oBox2 = document.getElementById('box2');
+			oBox2.addEventListener('animationstart',function(){
+				/*alert('系好安全带，准备出发')*/
+				/*oBox.style.left = "0px"*/
+				oBox2.style.transition = '2s';
+				oBox2.style.top = "50px";
+				oBox2.style.left = '320px'
+
+			})
+			oBox2.addEventListener('animationend',function(){
+				/*alert('系好安全带，准备出发')*/
+				/*oBox.style.left = "0px"*/
+				oBox2.style.transition = '2s';
+				oBox2.style.top = "750px";
+				oBox2.style.left = '-150px'
+
+			})
+
+
+
+
+
+			var oBox3 = document.getElementById('box3');
+			oBox3.addEventListener('animationstart',function(){
+				/*alert('系好安全带，准备出发')*/
+				/*oBox.style.left = "0px"*/
+				oBox3.style.transition = '2s';
+				oBox3.style.top = "370px";
+				oBox3.style.left = '640px'
+
+			})
+			oBox3.addEventListener('animationend',function(){
+				/*alert('系好安全带，准备出发')*/
+				/*oBox.style.left = "0px"*/
+				oBox3.style.transition = '2s';
+				oBox3.style.top = "750px";
+				oBox3.style.left = '-300px'
+
+			})
+			var oBox4 = document.getElementById('box4');
+			oBox4.addEventListener('animationstart',function(){
+				/*alert('系好安全带，准备出发')*/
+				/*oBox.style.left = "0px"*/
+				oBox4.style.transition = '2s';
+				oBox4.style.top = "510px";
+				oBox4.style.left = '40px'
+
+			})
+			oBox4.addEventListener('animationend',function(){
+				/*alert('系好安全带，准备出发')*/
+				/*oBox.style.left = "0px"*/
+				oBox4.style.transition = '2s';
+				oBox4.style.top = "750px";
+				oBox4.style.left = '-450px'
+
+			})
+		}
+	</script>
+</head>
+<body>
+	<!-- <div class="box1"></div> -->
+	<div class="box">
+		<img src="images/fsw.png">
+		<img id="box2" src="images/boy.png">
+		<img id="box3" src="images/girl.png">
+		<img id="box4" src="images/shamegirl.png">
+	</div>
+	
+</body>
+</html>
